@@ -1,0 +1,660 @@
+@media (max-width: 1400px) {
+ .academy-sec .custom-btn {
+ min-width: 250px;
+}
+ .banner-content {
+ width: 90%;
+ left: 5%;
+}
+.academy-get .acdemy-map {
+ width: 60%;
+}
+}
+@media (max-width: 1239px) {
+ .about-sec p {
+ padding-right: 10%;
+}
+ a.custom-btn.custom-btn-bg2 {
+ min-width: 225px;
+}
+ .learn-sec p {
+ padding-right: 5%;
+}
+.vedanta-banner .banner-content h1 {
+ font-size: 51px;
+}
+.ticket-box {
+ max-width: 1140px;
+}
+}
+@media (max-width: 1200px) {
+ .navbar-expand-lg .navbar-nav .nav-link {
+ padding-right: 4px;
+ padding-left: 4px;
+ font-size: 12px;
+}
+ .banner-content {
+ width: 80%;
+ left: 10%;
+}
+ .about-sec p {
+ margin-bottom: 15px;
+ padding-right: 0;
+}
+ .banner-content {
+ width: 94%;
+ left: 3%;
+}
+ h2 {
+ font-size: 42px;
+}
+ .event-sec .custom-btn {
+ min-width: 230px;
+}
+ a.custom-btn.custom-btn-bg2 {
+ min-width: 160px;
+}
+ .academy-sec .custom-btn {
+ min-width: 185px;
+ padding: 13px 19px;
+}
+ h1 {
+ font-size: 48px;
+}
+ .youth-camp-box {
+ width: 100%;
+}
+ .camp-sec .custom-btn {
+ font-size: 17px;
+}
+.vedanta-banner .banner-content {
+ width: 80%;
+ left: 5%;
+}
+.access-list ul li {
+ font-size: 18px;
+}
+.visit-image {
+ width: 100%;
+ height: 100%;
+ right: -15px;
+ object-fit: cover;
+}
+.author-img {
+ width: 100%;
+}
+.academic-img {
+ width: 100%;
+}
+.corporate-guru-img {
+ width: 100%;
+}
+.media-blog ul li {
+ width: 32.2%;
+}
+.ticket-box {
+ max-width: 960px;
+}
+}
+@media (max-width: 991px) {
+ li.nav-item {
+ background: #fff;
+ margin-bottom: 1px;
+ line-height: 22px;
+}
+ ul.navbar-nav {
+ text-align: center;
+}
+ .navbar-expand-lg .navbar-nav .nav-link {
+ font-size: 14px;
+}
+ .nav-link {
+ color: var(--color-dark-grey) !important;
+}
+ .banner-content p {
+ font-size: 16px;
+ margin-bottom: 50px;
+}
+ .banner-content {
+ bottom: 10%;
+}
+ .banner-sec.course-page-banner .banner-content {
+ bottom: 10%;
+}
+ h2 {
+ font-size: 32px;
+ line-height: normal;
+}
+ .about-sec p {
+ margin-bottom: 10px;
+ padding-right: 0;
+ line-height: 22px;
+ text-align: justify;
+}
+ .custom-btn {
+ padding: 10px 15px;
+ font-size: 18px;
+ min-width: 230px;
+}
+ .event-sec h3 {
+ font-size: 32px;
+ margin-bottom: 15px;
+}
+ .event-sec p {
+ margin-bottom: 15px;
+}
+ .event-box ul li {
+ padding-bottom: 10px;
+ margin-bottom: 9px;
+}
+ .event-box ul li h4 {
+ font-size: 18px;
+ padding-right: 105px;
+}
+ .event-box ul li .event-date {
+ font-size: 16px;
+}
+ a.custom-btn.custom-btn-bg2 {
+ min-width: 130px;
+}
+ .academy-sec .custom-btn {
+ min-width: 170px;
+ padding: 13px 15px;
+}
+ .academy-sec .custom-btn {
+ min-width: 142px;
+ padding: 13px 10px;
+ font-size: 16px;
+ margin: 0 5px 10px 0;
+}
+ h1 {
+ font-size: 36px;
+ line-height: normal;
+}
+ .learn-sec h1 {
+ margin-bottom: 20px;
+}
+ img.noun_Earth {
+ width: 80%;
+ float: right;
+}
+ .about-sec {
+ padding: 60px 0 30px;
+}
+ .event-sec {
+ padding: 80px 0 50px;
+}
+ section.academy-sec.sec-padding {
+ padding: 30px 0 20px;
+}
+ .learn-sec {
+ padding: 80px 0 70px;
+}
+ a.app-btn {
+ width: 140px;
+ margin: 10px 11px;
+}
+ .nearest-sec {
+ padding: 60px 0 50px;
+}
+ .book-sec {
+ padding: 60px 0 30px;
+}
+ footer {
+ padding: 40px 0 50px;
+}
+ .footer-list {
+ margin-bottom: 60px;
+}
+ .copyright {
+ padding-top: 59px;
+}
+ footer .col {
+ -ms-flex: 0 0 33.3%;
+ flex: 0 0 33.3%;
+ max-width: 33.3%;
+}
+ .corporate-sec::before {
+ width: 50%;
+ background-position: right 50%;
+}
+ .footer-list li a {
+ overflow-wrap: break-word;
+}
+ .course-page-banner a.custom-btn.custom-btn-bg2 {
+ padding: 10px 12px;
+ font-size: 18px;
+}
+ .camp-sec .col, .three-year-course .col, .corporate-retreats .col {
+ -ms-flex: 0 0 100%;
+ flex: 0 0 100%;
+ max-width: 100%;
+}
+ .camp-sec .custom-btn {
+ font-size: 20px;
+ margin-bottom: 30px;
+}
+ .banner-sec .img-responsive {
+ min-height: auto;
+}
+ .custom-btn i.fa.fa-play-circle-o {
+ left: -5px;
+}
+.reality-sec .youth-camp-box {
+ width: 100%;
+}
+.vedanta-banner .banner-content h1 {
+ font-size: 42px;
+line-height: normal;
+}
+.james-story {
+ padding: 100px 0 110px;
+}
+.james-story h1 {
+ font-size: 42px;
+ line-height: normal;
+}
+.james-story p {
+ margin-bottom: 30px;
+ padding-right: 0;
+}
+.james-story h6 {
+ margin-bottom: 30px;
+}
+.academy-get .col-lg-5.col-sm-6.col-12 {
+ padding-right: 15px;
+}
+.academy-get .acdemy-map {
+ width: 48%;
+}
+.academy-get h5 br {
+ display: none;
+}
+.time-article-box {
+ width: 100%;
+ padding: 30px 20px 20px;
+ position: relative;
+}
+.about-swamiji {
+ padding: 50px 0 40px;
+}
+.about-swamiji p {
+ padding-right: 0;
+ margin-bottom: 15px;
+}
+.youth-game .custom-box {
+ padding: 20px;
+}
+.youth-game {
+ padding: 0 0 30px;
+}
+.watch-swamiji-video {
+ padding: 30px 0;
+}
+.author-img {
+ top: -80px;
+}
+.organisation-bodies ul li, .organisation-bodies h2 {
+ text-align: center;
+}
+.organisation-bodies {
+ padding: 40px 0;
+}
+.media-blog ul li {
+ width: 48%;
+margin: 0 2% 30px 0 !important;
+}
+.media-blog {
+ margin-top: -50px;
+}
+.ticket-box {
+ max-width: 720px;
+}
+a.custom-btn.ticket-btn {
+ padding: 6px 11px 7px;
+ min-width: 160px;
+}
+}
+@media (max-width: 767px) {
+ .about-sec .col, .event-sec .col, .academy-sec .col, .learn-sec .col-lg-7.col-sm-6.col-12, .learn-sec .col-lg-5.col-sm-6.col-12.text-center, .corporate-sec .col, .nearest-sec .col, .about-sunandaji .col, .about-acdmy .col, .study-course .col, .about-swamiji .col-sm-6, .about-swamiji .col, .youth-game .col-sm-6, .watch-swamiji-video .col, .swamiji-author .col-sm-6, .reality-sec .col-lg-5.col-sm-6.col-12, .reality-sec .col-lg-7.col-sm-6.col-12, .james-story .col-lg-7.col-sm-6.col-12, .james-story .col-lg-5.col-sm-6.col-12.text-center, .academy-get .col-lg-5.col-sm-6.col-12, .media-video .col, .ticket-box .col-lg-8.col-sm-8.col-12.text-right, .ticket-box .col-lg-4.col-sm-4.col-12.ticket-right {
+ -ms-flex: 0 0 100%;
+ flex: 0 0 100%;
+ max-width: 100%;
+}
+.ticket-left-box {
+ padding: 20px;
+ min-height: 170px;
+}
+.ticket-right h6, .ticket-right p {
+ margin-bottom: 0;
+ padding: 10px;
+}
+.media-blog ul li {
+ width: 100%;
+ margin: 0 0% 30px 0 !important;
+}
+.media-blog ul li .media-content {
+ padding: 15px;
+}
+.media-blog ul li h4, .media-blog ul li h5 {
+ min-height: auto;
+}
+.ticket-like-list li {
+ margin: 10px 15px;
+}
+.acdmy-video-sec p {
+ padding-right: 0;
+}
+a.custom-btn.ticket-btn {
+ padding: 6px 11px 7px;
+ min-width: 140px;
+ margin: 6px 0 6px !important;
+}
+.ticket-sec {
+ top: -57px;
+}
+.ticket-box {
+ bottom: 57px;
+}
+.about-acdmy {
+ padding: 40px 0 30px;
+}
+ img.noun_Earth {
+ width: 70%;
+ margin: 10px 15%;
+}
+.after-visit .youth-camp-box {
+ width: 100%;
+ margin: 20px 0 30px;
+}
+ .book-sec {
+ padding: 40px 0 30px;
+}
+ .camp-sec {
+ padding: 40px 0 30px;
+}
+.study-course {
+ padding: 60px 0;
+}
+ .three-year-course {
+ padding: 40px 0;
+}
+.vedanta-banner .banner-content h1 {
+ font-size: 32px;
+}
+.vedanta-banner .banner-content h5 {
+ padding-right: 105px;
+}
+.study-course .youth-camp-box {
+ width: 100%;
+ margin-bottom: 30px;
+}
+.access-list ul li {
+ width: 100%;
+ margin: 15px 0;
+}
+ .reality-sec .custom-box {
+ padding: 30px;
+ margin-top: 40px;
+}
+ .corporate-retreats {
+ padding: 40px 0 0;
+}
+ .custom-box {
+ padding: 20px 15px;
+}
+ .three-year-course .custom-box .custom-btn {
+ font-size: 15px;
+}
+ .camp-sec .custom-btn {
+ font-size: 12px;
+ padding: 10px 9px;
+}
+ .camp-sec h2 {
+ margin-bottom: 25px;
+}
+ .camp-sec p {
+ margin-bottom: 15px;
+ padding-right: 0;
+}
+ .youth-camp-list li h4 {
+ font-size: 19px;
+ padding-right: 100px;
+}
+ .youth-camp-list li .event-date {
+ font-size: 16px;
+}
+ .three-year-course p {
+ margin-bottom: 15px;
+ padding-right: 0;
+}
+ .three-year-course .custom-box .form-control {
+ min-height: 48px;
+}
+ .about-sec {
+ padding: 40px 0 30px;
+}
+ .about-sec p {
+ margin-bottom: 20px;
+}
+ .event-sec {
+ padding: 60px 0 50px;
+}
+ .event-sec p {
+ margin-bottom: 25px;
+}
+ .event-box {
+ padding-right: 15px;
+ margin-top: 30px;
+}
+ .academy-sec .custom-btn {
+ min-width: 39%;
+ padding: 15px 10px;
+ margin: 0 5% 21px;
+}
+ .learn-sec {
+ padding: 50px 0 70px;
+}
+ a.learn-play-btn {
+ font-size: 55px;
+ min-width: 120px;
+ line-height: 116px;
+ margin: 20px 0;
+}
+ a.app-btn {
+ width: 160px;
+ margin: 10px 11px;
+}
+ .corporate-sec {
+ padding: 60px 0 40px;
+ min-height: 820px;
+ padding-top: 460px;
+}
+ .corporate-sec::before {
+ width: 100%;
+ background-position: 100% bottom;
+ height: 100%;
+ max-height: 420px;
+ top: 0;
+ bottom: 0;
+ background-size: cover;
+ -webkit-background-size: cover;
+}
+.vedanta-banner .banner-content {
+ width: 90%;
+ left: 5%;
+}
+.about-acdmy h2, .academy-get h2 {
+ margin: 20px 0;
+}
+.about-acdmy .padding-none {
+ padding: 15px!important;
+}
+.visit-image {
+ right: 0;
+ position: relative;
+}
+.academy-get .acdemy-map {
+ width: 90%;
+ position: relative;
+ margin: 0 5%;
+ top: 20px;
+ height: 380px;
+}
+.academy-get {
+ padding: 60px 0 80px;
+}
+.acdmy-facilities p {
+ padding-right: 0;
+ line-height: 24px;
+ margin-bottom: 15px;
+}
+.study-course h2 {
+ margin-bottom: 30px;
+ line-height: normal;
+}
+.about-swamiji {
+ padding: 40px 0;
+}
+.swami-jiimg {
+ margin-bottom:15px;
+}
+.youth-game p {
+ margin-bottom: 30px;
+}
+.swamiji-author {
+ padding: 40px 0;
+}
+.author-img {
+ top: 0;
+ position: relative;
+ margin-top: 30px;
+}
+.academic-sec h2 {
+ margin-bottom: 30px;
+ margin-top: 15px;
+}
+.academic-sec {
+ padding-bottom: 30px;
+}
+.corporate-guru-img {
+ margin-top: 30px;
+}
+.speaking-credential {
+ padding: 60px 15px 40px;
+}
+.col-lg-6.col-sm-6.col-12.order-2.padding-none {
+ padding: 0 15px !important;
+}
+.corporate-guru p {
+ padding-right: 0;
+}
+.organisation-bodies ul li {
+ line-height: 28px;
+}
+.organisation-bodies h2 {
+ line-height: normal;
+}
+.time-logo {
+ width: 140px;
+}
+.ticket-box {
+ max-width: 540px;
+}
+}
+@media (max-width: 576px) {
+ .vedanta-banner .banner-content h5 {
+ padding-right: 0;
+ font-size: 14px;
+}
+.ticket-box {
+max-width: calc(100% - 30px);
+    bottom: 42px;
+}
+.ticket-right h6, .ticket-right p {
+ padding: 5px 10px;
+}
+.ticket-price {
+ position: relative;
+ bottom: 0;
+}
+.ticket-left-box h3 {
+ line-height: 34px;
+ font-size: 24px;
+}
+.row.ticket-inner-box {
+ margin-bottom: 0;
+ padding: 15px;
+}
+.ticket-inner-box p {
+ padding-right: 0;
+}
+.ticket-sec .card-body {
+ padding: 0;
+}
+section.reality-sec {
+ padding: 50px 0 40px;
+}
+.james-story {
+ padding: 40px 0 60px;
+}
+.james-story h1 {
+ font-size: 32px;
+ line-height: normal;
+}
+ .academy-sec .custom-btn {
+ min-width: 100%;
+ margin: 0 0 20px;
+}
+ .custom-btn {
+ min-width: 100%;
+ margin: 0 0 20px;
+}
+ a.custom-btn.custom-btn-bg2 {
+ min-width: 100%;
+}
+ .event-sec .custom-btn {
+ min-width: 100%;
+}
+ .book-sec .col {
+ -ms-flex: 0 0 100%;
+ flex: 0 0 100%;
+ max-width: 100%;
+}
+ h1 {
+ font-size: 32px;
+}
+ .custom-btn.min-width-auto {
+ min-width: 100%;
+}
+ .available-list li {
+ width: 93px;
+ padding: 15px 8px 10px;
+ margin-bottom: 30px;
+}
+ a.footer-logo img {
+ width: 120px;
+}
+ footer .col {
+ -ms-flex: 0 0 100%;
+ flex: 0 0 100%;
+ max-width: 100%;
+ text-align: center;
+}
+ a.footer-logo {
+ margin-bottom: 40px;
+}
+ .footer-list {
+ margin-bottom: 30px;
+}
+ .copyright {
+ padding-top: 39px;
+}
+ .footer-list br {
+ display: none;
+}
+ .book-btn img {
+ max-width: 70%;
+ margin-left: 15%;
+}
+}
