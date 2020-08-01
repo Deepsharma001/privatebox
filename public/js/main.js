@@ -1,174 +1,278 @@
-jQuery(document).ready(function ($) {
+(function ($)
+  { "use strict"
+  
 
-  // Back to top button
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function () {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return false;
-  });
-
-  // Stick the header at top on scroll
-  $("#header").sticky({
-    topSpacing: 0,
-    zIndex: '50'
-  });
-
-  // Intro background carousel
-  $("#intro-carousel").owlCarousel({
-    autoplay: true,
-    dots: false,
-    loop: true,
-    animateOut: 'fadeOut',
-    items: 1
-  });
-
-  // Initiate the wowjs animation library
-  new WOW().init();
-
-  // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
-    animation: {
-      opacity: 'show'
-    },
-    speed: 400
-  });
-
-  // Mobile Navigation
-  if ($('#nav-menu-container').length) {
-    var $mobile_nav = $('#nav-menu-container').clone().prop({
-      id: 'mobile-nav'
-    });
-    $mobile_nav.find('> ul').attr({
-      'class': '',
-      'id': ''
-    });
-    $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
-    $('body').append('<div id="mobile-body-overly"></div>');
-    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
-
-    $(document).on('click', '.menu-has-children i', function (e) {
-      $(this).next().toggleClass('menu-item-active');
-      $(this).nextAll('ul').eq(0).slideToggle();
-      $(this).toggleClass("fa-chevron-up fa-chevron-down");
+/* 1. Proloder */
+    $(window).on('load', function () {
+      $('#preloader-active').delay(450).fadeOut('slow');
+      $('body').delay(450).css({
+        'overflow': 'visible'
+      });
     });
 
-    $(document).on('click', '#mobile-nav-toggle', function (e) {
-      $('body').toggleClass('mobile-nav-active');
-      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-      $('#mobile-body-overly').toggle();
-    });
-
-    $(document).click(function (e) {
-      var container = $("#mobile-nav, #mobile-nav-toggle");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
+/* 2. sticky And Scroll UP */
+    $(window).on('scroll', function () {
+      var scroll = $(window).scrollTop();
+      if (scroll < 400) {
+        $(".header-sticky").removeClass("sticky-bar");
+        $('#back-top').fadeOut(500);
+      } else {
+        $(".header-sticky").addClass("sticky-bar");
+        $('#back-top').fadeIn(500);
       }
     });
-  } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
-    $("#mobile-nav, #mobile-nav-toggle").hide();
-  }
 
-  // Smooth scroll for the menu and links with .scrollto classes
-  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      if (target.length) {
-        var top_space = 0;
+  // Scroll Up
+    $('#back-top a').on("click", function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  
 
-        if ($('#header').length) {
-          top_space = $('#header').outerHeight();
+/* 3. slick Nav */
+// mobile_menu
+    var menu = $('ul#navigation');
+    if(menu.length){
+      menu.slicknav({
+        prependTo: ".mobile_menu",
+        closedSymbol: '+',
+        openedSymbol:'-'
+      });
+    };
 
-          if (!$('#header').hasClass('header-fixed')) {
-            top_space = top_space - 20;
+
+
+    
+/* 4. MainSlider-1 */
+    // h1-hero-active
+    function mainSlider() {
+      var BasicSlider = $('.slider-active');
+      BasicSlider.on('init', function (e, slick) {
+        var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
+        doAnimations($firstAnimatingElements);
+      });
+      BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+        var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+        doAnimations($animatingElements);
+      });
+      BasicSlider.slick({
+        autoplay: false,
+        autoplaySpeed: 4000,
+        dots: false,
+        fade: true,
+        arrows: false, 
+        prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false
+            }
+          }
+        ]
+      });
+
+      function doAnimations(elements) {
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function () {
+          var $this = $(this);
+          var $animationDelay = $this.data('delay');
+          var $animationType = 'animated ' + $this.data('animation');
+          $this.css({
+            'animation-delay': $animationDelay,
+            '-webkit-animation-delay': $animationDelay
+          });
+          $this.addClass($animationType).one(animationEndEvents, function () {
+            $this.removeClass($animationType);
+          });
+        });
+      }
+    }
+    mainSlider();
+
+
+
+/* 4. Testimonial Active*/
+  var testimonial = $('.h1-testimonial-active');
+  if(testimonial.length){
+  testimonial.slick({
+      dots: false,
+      infinite: true,
+      speed: 1000,
+      autoplay:true,
+      loop:true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-top-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-top-right"></i></button>',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false,
+            arrow:false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:false,
           }
         }
+      ]
+    });
+  }
 
-        $('html, body').animate({
-          scrollTop: target.offset().top - top_space
-        }, 1500, 'easeInOutExpo');
 
-        if ($(this).parents('.nav-menu').length) {
-          $('.nav-menu .menu-active').removeClass('menu-active');
-          $(this).closest('li').addClass('menu-active');
-        }
 
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
-        return false;
-      }
+/* 6. Nice Selectorp  */
+  var nice_Select = $('select');
+    if(nice_Select.length){
+      nice_Select.niceSelect();
     }
-  });
 
-
-  // Porfolio - uses the magnific popup jQuery plugin
-  $('.portfolio-popup').magnificPopup({
-    type: 'image',
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    gallery: {
-      enabled: true
+ // Brand Active
+ $('.brand-active').slick({
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 400,
+  arrows: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false,
+      }
     },
-    zoom: {
-      enabled: true,
-      duration: 300,
-      easing: 'ease-in-out',
-      opener: function (openerElement) {
-        return openerElement.is('img') ? openerElement : openerElement.find('img');
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false,
       }
-    }
-  });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      900: {
-        items: 3
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
       }
-    }
-  });
-
-  // Clients carousel (uses the Owl Carousel library)
-  $(".clients-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 2
-      },
-      768: {
-        items: 4
-      },
-      900: {
-        items: 6
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
-    }
-  });
+    },
 
-
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
+
+/* 7. data-background */
+    $("[data-background]").each(function () {
+      $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
+      });
+
+
+/* 10. WOW active */
+    new WOW().init();
+
+// 11. ---- Mailchimp js --------//  
+    function mailChimp() {
+      $('#mc_embed_signup').find('form').ajaxChimp();
+    }
+    mailChimp();
+
+
+// 12 Pop Up Img
+    var popUp = $('.single_gallery_part, .img-pop-up');
+      if(popUp.length){
+        popUp.magnificPopup({
+          type: 'image',
+          gallery:{
+            enabled:true
+          }
+        });
+      }
+// 12 Pop Up Video
+    var popUp = $('.popup-video');
+    if(popUp.length){
+      popUp.magnificPopup({
+        type: 'iframe'
+      });
+    }
+
+/* 13. counterUp*/
+    $('.counter').counterUp({
+      delay: 10,
+      time: 3000
+    });
+
+/* 14. Datepicker */
+  $('#datepicker1').datepicker();
+
+// 15. Time Picker
+  $('#timepicker').timepicker();
+
+//16. Overlay
+  $(".snake").snakeify({
+    speed: 200
+  });
+
+
+//17.  Progress barfiller
+
+  $('#bar1').barfiller();
+  $('#bar2').barfiller();
+  $('#bar3').barfiller();
+  $('#bar4').barfiller();
+  $('#bar5').barfiller();
+  $('#bar6').barfiller();
+
+})(jQuery);
