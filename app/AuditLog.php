@@ -9,7 +9,7 @@ class AuditLog extends Model
     public $table = 'audit_logs';
 
     protected $fillable = [
-        'description',
+        'description', 
         'subject_id',
         'subject_type',
         'user_id',
